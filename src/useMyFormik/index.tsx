@@ -7,7 +7,6 @@ export interface IUseFormParams<Values> extends FormikConfig<Values> {
 function useMyFormik<T>(config: IUseFormParams<T>): FormikProps<T> {
   const formik = useFormik(config)
 
-  console.log(formik, 'olha o formik')
   return formik
 }
 

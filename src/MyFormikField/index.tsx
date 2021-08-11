@@ -16,8 +16,17 @@ const MyFormikField: React.FC<TextFieldProps> = ({
     },
     [form, name]
   )
+  
+  const errorMessage = form.errors[name]
 
-  return <TextFieldMUI onChange={handleChange} {...textFieldProps} />
+  return (
+    <TextFieldMUI 
+      {...textFieldProps}
+      onChange={handleChange} 
+      error={!!errorMessage}
+      helperText={errorMessage ? errorMessage : textFieldProps.helperText}
+    />
+  )
 }
 
 export default MyFormikField
