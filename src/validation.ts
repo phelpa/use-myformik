@@ -1,8 +1,8 @@
 import * as Yup from 'yup'
 
 const Validation = Yup.object().shape({
-  aldair: Yup.string().required('Required Field'),
-  pereira: Yup.string().required('Required Field')
+  field1: Yup.string().required('Required Field'),
+  field2: Yup.string().required('Required Field')
 })
 
 export default Validation;
