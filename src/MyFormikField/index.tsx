@@ -12,15 +12,21 @@ const MyFormikField: React.FC<TextFieldProps> = ({
     (e: React.ChangeEvent<HTMLInputElement>) => {
       const value = e.target.value ?? ''
 
-      form.setFieldValue(name as string, value)
+      form.setFieldValue(name, value)
     },
     [form, name]
   )
-  
+
   const errorMessage = form.errors[name]
 
+  window['formik'] = form;
   return (
     <TextFieldMUI 
+      size='small'
+      margin='normal'
+      variant='outlined'
+      type='text'
+      fullWidth
       {...textFieldProps}
       onChange={handleChange} 
       error={!!errorMessage}
