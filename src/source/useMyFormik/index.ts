@@ -10,7 +10,7 @@ const removeEmptyPropertiesFromObject = (obj: any) => {
   return obj
 }
 
-function useMyFormik<T>(config: IUseFormParams<T>): FormikProps<T> {
+export function useMyFormik<T>(config: IUseFormParams<T>): FormikProps<T> {
 
   const formik = useFormik(config)
 
@@ -29,5 +29,3 @@ function useMyFormik<T>(config: IUseFormParams<T>): FormikProps<T> {
 
   return formik
 }
-
-export default useMyFormik

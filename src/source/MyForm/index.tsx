@@ -18,7 +18,7 @@ export const FormFieldsContext = React.createContext<FormikProps<any>>(
   {} as FormikProps<any>
 )
 
-const MyForm = React.memo<IFormProps>(({ children, context }) => {
+export const MyForm = React.memo<IFormProps>(({ children, context }) => {
   const classes = useStyles()
 
   return (
@@ -33,5 +33,3 @@ const MyForm = React.memo<IFormProps>(({ children, context }) => {
     </FormFieldsContext.Provider>
   )
 })
-
-export default MyForm

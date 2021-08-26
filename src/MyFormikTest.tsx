@@ -1,7 +1,7 @@
 
-import useMyFormik from './useMyFormik'
-import MyFormikField from './MyFormikField'
-import MyForm from './MyForm'
+import { useMyFormik } from './source/useMyFormik'
+import { MyFormikField } from './source/MyFormikField'
+import { MyForm } from './source/MyForm'
 import Validation from './validation'
 import { Button } from '@material-ui/core'
 
