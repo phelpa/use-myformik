@@ -2,7 +2,6 @@ import React from 'react'
 import { TextField as TextFieldMUI, TextFieldProps } from '@material-ui/core'
 import { FormFieldsContext } from '../MyForm'
 
-
 export const MyFormikField: React.FC<TextFieldProps> = ({
   name,
   ...textFieldProps
@@ -18,17 +17,17 @@ export const MyFormikField: React.FC<TextFieldProps> = ({
     [form, name]
   )
 
-  const errorMessage = form.errors[name as string]
+  const errorMessage = form?.errors?.[name as string]
 
   return (
-    <TextFieldMUI 
-      size='small'
-      margin='normal'
-      variant='outlined'
-      type='text'
+    <TextFieldMUI
+      size="small"
+      margin="normal"
+      variant="outlined"
+      type="text"
       fullWidth
       {...textFieldProps}
-      onChange={handleChange} 
+      onChange={handleChange}
       error={!!errorMessage}
       helperText={errorMessage ? errorMessage : textFieldProps.helperText}
     />
