@@ -3,6 +3,7 @@ import { TextFieldProps } from '@material-ui/core'
 
 export interface IUseFormParams<Values> extends FormikConfig<Values> {
   removeEmptyValues?: boolean
+  removeEmptySpace?: boolean
 }
 
 export function useMyFormik<T>(config: IUseFormParams<T>): FormikProps<T>
